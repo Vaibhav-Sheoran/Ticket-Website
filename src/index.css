@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cinema-themed design system */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Deep cinema blue primary */
+    --primary: 231 48% 22%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 231 70% 45%;
+
+    /* Warm secondary */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Golden accent */
+    --accent: 45 93% 47%;
+    --accent-foreground: 215 25% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 231 48% 22%;
+
+    --radius: 0.75rem;
+
+    /* Cinema-specific colors */
+    --cinema-gold: 45 93% 47%;
+    --cinema-silver: 210 8% 65%;
+    --seat-available: 120 45% 55%;
+    --seat-selected: 45 93% 47%;
+    --seat-taken: 0 72% 51%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(231 48% 22% / 0.95), hsl(231 70% 45% / 0.85));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.05), hsl(0 0% 100% / 0.02));
+
+    /* Shadows */
+    --shadow-cinema: 0 20px 40px -10px hsl(231 48% 22% / 0.3);
+    --shadow-glow: 0 0 30px hsl(231 70% 45% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Cinema dark theme */
+    --background: 215 30% 8%;
+    --foreground: 210 40% 95%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 45 93% 47%;
+    --primary-foreground: 215 30% 8%;
+    --primary-glow: 45 93% 65%;
+
+    --secondary: 215 20% 18%;
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 231 70% 55%;
+    --accent-foreground: 210 40% 95%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 95%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 45 93% 47%;
+
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 30% 8% / 0.95), hsl(231 48% 22% / 0.85));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.08), hsl(0 0% 100% / 0.02));
+
+    /* Dark mode shadows */
+    --shadow-cinema: 0 20px 40px -10px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 30px hsl(45 93% 47% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
